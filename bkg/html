@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel - Crêpes Haus</title>
+    <style>
+        body { background: #0d0d0d; color: white; font-family: Arial; text-align: center; padding-top: 20px; }
+        .login-box, .admin-box { background: #1a1a1a; padding: 30px; border-radius: 20px; max-width: 600px; margin: auto; }
+        input, button { padding: 10px; margin: 10px; width: 90%; border-radius: 10px; border: none; }
+        button { background: #d8b26e; cursor: pointer; font-weight: bold; }
+        .error { color: red; }
+        .menu-edit { background: #252525; padding: 10px; margin: 10px 0; border-radius: 10px; text-align: left; }
+        .price-input { width: 80px; }
+        .logout-btn { background: #444; margin-top: 20px; }
+        .category-title { color: #d8b26e; margin-top: 20px; margin-bottom: 10px; border-left: 3px solid #d8b26e; padding-left: 10px; }
+        #adminContainer { display: none; }
+        .admin-box { max-height: 80vh; overflow-y: auto; }
+    </style>
+</head>
+<body>
+
+<div id="loginContainer">
+    <div class="login-box">
+        <h2>🔐 Admin Login</h2>
+        <input type="password" id="passwordInput" placeholder="Passwort">
+        <button onclick="checkPassword()">Login</button>
+        <div id="errorMsg" class="error"></div>
+    </div>
+</div>
+
+<div id="adminContainer">
+    <div class="admin-box">
+        <h2>🛠️ Crêpes Haus - Admin Panel</h2>
+        <p>Hier kannst du alle Preise bearbeiten</p>
+        <div id="menuList"></div>
+        <button class="logout-btn" onclick="logout()">🚪 Logout</button>
+    </div>
+</div>
+
+<script>
+    const ADMIN_PASSWORD = "admin123";
+
+    function checkPassword() {
+        const input = document.getElementById('passwordInput').value;
+        if (input === ADMIN_PASSWORD) {
+            document.getElementById('loginContainer').style.display = 'none';
+            document.getElementById('adminContainer').style.display = 'block';
+            loadFullMenu();
+        } else {
+            document.getElementById('errorMsg').innerText = 'Falsches Passwort';
+        }
+    }
+
+    function logout() {
+        document.getElementById('loginContainer').style.display = 'block';
+        document.getElementById('adminContainer').style.display = 'none';
+        document.getElementById('passwordInput').value = '';
+        document.getElementById('errorMsg').innerText = '';
+    }
+
+    function loadFullMenu() {
+        document.getElementById('menuList').innerHTML = `
+            <div class="category-title">🧇 WAFFELN</div>
+            <div class="menu-edit">Favorite Waffel (8,50 €) - <input type="text" class="price-input" id="p1" value="8.50"> € <button onclick="save('p1','s1')">Speichern</button> <span id="s1"></span></div>
+            <div class="menu-edit">Cherry Chocco (6,20 €) - <input type="text" class="price-input" id="p2" value="6.20"> € <button onclick="save('p2','s2')">Speichern</button> <span id="s2"></span></div>
+            <div class="menu-edit">Blueberry Love (6,70 €) - <input type="text" class="price-input" id="p3" value="6.70"> € <button onclick="save('p3','s3')">Speichern</button> <span id="s3"></span></div>
+            <div class="menu-edit">Strawberry Dream (6,50 €) - <input type="text" class="price-input" id="p4" value="6.50"> € <button onclick="save('p4','s4')">Speichern</button> <span id="s4"></span></div>
+            <div class="menu-edit">Berry Vanilla (7,80 €) - <input type="text" class="price-input" id="p5" value="7.80"> € <button onclick="save('p5','s5')">Speichern</button> <span id="s5"></span></div>
+            <div class="menu-edit">Cherry Vanilla (6,20 €) - <input type="text" class="price-input" id="p6" value="6.20"> € <button onclick="save('p6','s6')">Speichern</button> <span id="s6"></span></div>
+            <div class="menu-edit">Banana Chocco (5,10 €) - <input type="text" class="price-input" id="p7" value="5.10"> € <button onclick="save('p7','s7')">Speichern</button> <span id="s7"></span></div>
+            <div class="menu-edit">Blue Vanilla (7,30 €) - <input type="text" class="price-input" id="p8" value="7.30"> € <button onclick="save('p8','s8')">Speichern</button> <span id="s8"></span></div>
+            <div class="menu-edit">Waffel mit Zucker & Zimt (4,20 €) - <input type="text" class="price-input" id="p9" value="4.20"> € <button onclick="save('p9','s9')">Speichern</button> <span id="s9"></span></div>
+
+            <div class="category-title">🥞 SÜSSE CRÊPES</div>
+            <div class="menu-edit">Sweet Favorite (8,50 €) - <input type="text" class="price-input" id="p10" value="8.50"> € <button onclick="save('p10','s10')">Speichern</button> <span id="s10"></span></div>
+            <div class="menu-edit">Chocco Dream (8,50 €) - <input type="text" class="price-input" id="p11" value="8.50"> € <button onclick="save('p11','s11')">Speichern</button> <span id="s11"></span></div>
+            <div class="menu-edit">Marmelade Crêpes (4,00 €) - <input type="text" class="price-input" id="p12" value="4.00"> € <button onclick="save('p12','s12')">Speichern</button> <span id="s12"></span></div>
+            <div class="menu-edit">Berry Bliss (6,50 €) - <input type="text" class="price-input" id="p13" value="6.50"> € <button onclick="save('p13','s13')">Speichern</button> <span id="s13"></span></div>
+            <div class="menu-edit">Banana Heaven (5,50 €) - <input type="text" class="price-input" id="p14" value="5.50"> € <button onclick="save('p14','s14')">Speichern</button> <span id="s14"></span></div>
+            <div class="menu-edit">Strawberry Love (6,20 €) - <input type="text" class="price-input" id="p15" value="6.20"> € <button onclick="save('p15','s15')">Speichern</button> <span id="s15"></span></div>
+            <div class="menu-edit">White Delight (5,70 €) - <input type="text" class="price-input" id="p16" value="5.70"> € <button onclick="save('p16','s16')">Speichern</button> <span id="s16"></span></div>
+            <div class="menu-edit">Pistachio Cream (8,20 €) - <input type="text" class="price-input" id="p17" value="8.20"> € <button onclick="save('p17','s17')">Speichern</button> <span id="s17"></span></div>
+            <div class="menu-edit">Kinder Magic (7,50 €) - <input type="text" class="price-input" id="p18" value="7.50"> € <button onclick="save('p18','s18')">Speichern</button> <span id="s18"></span></div>
+            <div class="menu-edit">Coco White (6,00 €) - <input type="text" class="price-input" id="p19" value="6.00"> € <button onclick="save('p19','s19')">Speichern</button> <span id="s19"></span></div>
+            <div class="menu-edit">Sweet Mix (7,00 €) - <input type="text" class="price-input" id="p20" value="7.00"> € <button onclick="save('p20','s20')">Speichern</button> <span id="s20"></span></div>
+            <div class="menu-edit">Cherry Kiss (6,20 €) - <input type="text" class="price-input" id="p21" value="6.20"> € <button onclick="save('p21','s21')">Speichern</button> <span id="s21"></span></div>
+            <div class="menu-edit">Eis (1,00 €) - <input type="text" class="price-input" id="p22" value="1.00"> € <button onclick="save('p22','s22')">Speichern</button> <span id="s22"></span></div>
+
+            <div class="category-title">🧀 HERZHAFTE CRÊPES</div>
+            <div class="menu-edit">Ham - Cheese Crêpe (7,00 €) - <input type="text" class="price-input" id="p23" value="7.00"> € <button onclick="save('p23','s23')">Speichern</button> <span id="s23"></span></div>
+            <div class="menu-edit">Cheese Crêpe (6,50 €) - <input type="text" class="price-input" id="p24" value="6.50"> € <button onclick="save('p24','s24')">Speichern</button> <span id="s24"></span></div>
+            <div class="menu-edit">Savoury Salami (7,00 €) - <input type="text" class="price-input" id="p25" value="7.00"> € <button onclick="save('p25','s25')">Speichern</button> <span id="s25"></span></div>
+        `;
+    }
+
+    function save(priceId, spanId) {
+        let price = document.getElementById(priceId).value;
+        document.getElementById(spanId).innerText = '✅ ' + price + ' € gespeichert';
+        setTimeout(() => { document.getElementById(spanId).innerText = ''; }, 2000);
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crêpes Haus · Moderne Crêpes & Waffeln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0a0a0a;
+      color: #f0f0f0;
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    /* Moderner Glasteil-Effekt */
+    .glass {
+      background: rgba(20, 20, 30, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    /* Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(10, 10, 10, 0.9);
+      backdrop-filter: blur(12px);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255, 215, 150, 0.2);
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 600;
+      background: linear-gradient(135deg, #e8b87a, #d4944a);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .logo i {
+      color: #d8a15e;
+      margin-right: 8px;
+    }
+
+    nav a {
+      color: #e0e0e0;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 500;
+      transition: 0.2s;
+      letter-spacing: -0.2px;
+    }
+
+    nav a:hover {
+      color: #e8b87a;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 85vh;
+      background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url("https://images.unsplash.com/photo-1519676867240-f03562e64548?q=80&w=1600");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 700px;
+      padding: 2rem;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #fff, #e8b87a);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      color: #ddd;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #e8b87a, #c98642);
+      border: none;
+      padding: 14px 32px;
+      border-radius: 40px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      color: #0a0a0a;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(232, 184, 122, 0.3);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    /* Kategorie Titel */
+    .category-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin: 3rem 0 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-left: 4px solid #e8b87a;
+      padding-left: 20px;
+    }
+
+    .category-title i {
+      color: #e8b87a;
+      font-size: 1.8rem;
+    }
+
+    /* Grid */
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.8rem;
+    }
+
+    /* Moderne Karte */
+    .card {
+      background: rgba(25, 25, 35, 0.8);
+      backdrop-filter: blur(4px);
+      border-radius: 28px;
+      padding: 1.5rem;
+      transition: all 0.3s;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      background: rgba(35, 35, 45, 0.9);
+      border-color: rgba(232, 184, 122, 0.3);
+      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.5);
+    }
+
+    .card h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      letter-spacing: -0.3px;
+    }
+
+    .card p {
+      color: #b0b0b0;
+      font-size: 0.85rem;
+      line-height: 1.5;
+      margin: 10px 0;
+    }
+
+    .price {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #e8b87a;
+      margin: 12px 0 8px;
+      display: inline-block;
+    }
+
+    .allergen {
+      font-size: 0.7rem;
+      color: #777;
+      background: rgba(255,255,255,0.05);
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 30px;
+      margin-top: 8px;
+    }
+
+    /* Info Boxen */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .info-card {
+      background: rgba(20, 20, 30, 0.6);
+      backdrop-filter: blur(8px);
+      border-radius: 28px;
+      padding: 2rem;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .info-card i {
+      font-size: 2.5rem;
+      color: #e8b87a;
+      margin-bottom: 1rem;
+    }
+
+    .info-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      margin-top: 3rem;
+      color: #888;
+    }
+
+    @media (max-width: 700px) {
+      .hero h1 { font-size: 2.5rem; }
+      nav { flex-direction: column; text-align: center; }
+      nav a { margin: 0 0.8rem; }
+      .category-title { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo"><i class="fas fa-mug-hot"></i> Crêpes Haus</div>
+  <div>
+    <a href="#waffeln"><i class="fas fa-waffle"></i> Waffeln</a>
+    <a href="#sweet"><i class="fas fa-candy-cane"></i> Süß</a>
+    <a href="#savory"><i class="fas fa-cheese"></i> Herzhaft</a>
+    <a href="#info"><i class="fas fa-info-circle"></i> Info</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Art dé Crêpes</h1>
+    <p>Knusprige Waffeln • Zarte Crêpes • Eis • Kaffee</p>
+    <button class="btn-primary" onclick="document.getElementById('waffeln').scrollIntoView({behavior:'smooth'})">
+      <i class="fas fa-arrow-down"></i> Entdecken
+    </button>
+  </div>
+</section>
+
+<div class="container">
+  <!-- WAFFELN -->
+  <h2 id="waffeln" class="category-title"><i class="fas fa-waffle"></i> Waffel Genuss</h2>
+  <div class="menu-grid">
+    <div class="card"><h3>Favorite Waffel</h3><p>Nutella, Vanillesauce, Erdbeeren, Bananen, Kirschen, Blaubeeren</p><div class="price">8,50 €</div><div class="allergen">A,B,C,D,E</div></div>
+    <div class="card"><h3>Cherry Chocco</h3><p>Nutella, saftige Kirschen</p><div class="price">6,20 €</div><div class="allergen">1,2,3,4,5,A,B,C,D,E</div></div>
+    <div class="card"><h3>Blueberry Love</h3><p>Nutella, Blaubeeren</p><div class="price">6,70 €</div><div class="allergen">1,2,3,4,5,A,B,C,D,E</div></div>
+    <div class="card"><h3>Strawberry Dream</h3><p>Nutella, Erdbeeren</p><div class="price">6,50 €</div><div class="allergen">1,2,3,4,5,A,B,C,D,E</div></div>
+    <div class="card"><h3>Berry Vanilla</h3><p>Vanillesauce, Himbeeren, Bueno Creme</p><div class="price">7,80 €</div><div class="allergen">1,2,3,A,B,C</div></div>
+    <div class="card"><h3>Cherry Vanilla</h3><p>Vanillesauce, fruchtige Kirschen</p><div class="price">6,20 €</div><div class="allergen">1,2,3,A,B,C</div></div>
+    <div class="card"><h3>Banana Chocco</h3><p>Nutella, Bananen</p><div class="price">5,10 €</div><div class="allergen">1,2,3,4,5,A,B,C,D,E</div></div>
+    <div class="card"><h3>Blue Vanilla</h3><p>Vanillesauce, Blaubeeren</p><div class="price">7,30 €</div><div class="allergen">1,2,3,A,B,C</div></div>
+    <div class="card"><h3>Waffel mit Zucker & Zimt</h3><p>+ Eis (Vanille/Schoko/Erdbeere) +1€</p><div class="price">4,20 €</div><div class="allergen">1,8,A,B</div></div>
+  </div>
+
+  <!-- SÜSSE CRÊPES -->
+  <h2 id="sweet" class="category-title"><i class="fas fa-candy-cane"></i> Süße Crêpes</h2>
+  <div class="menu-grid">
+    <div class="card"><h3>Sweet Favorite</h3><p>Bueno Creme, Keks-Crunch, Erdbeeren</p><div class="price">8,50 €</div><div class="allergen">1,2,3,4,5,A,B,C,D,E</div></div>
+    <div class="card"><h3>Chocco Dream</h3><p>Kinder Schokolade, Blaubeeren</p><div class="price">8,50 €</div><div class="allergen">1,2,3,4,5,A,B,C,D,E</div></div>
+    <div class="card"><h3>Marmelade Crêpes</h3><p>Aprikose / Erdbeere</p><div class="price">4,00 €</div><div class="allergen">1,2,3,A,B,C</div></div>
+    <div class="card"><h3>Berry Bliss</h3><p>Nutella, Keks-Crunch, Blaubeeren</p><div class="price">6,50 €</div><div class="allergen">1,2,3,4,5,A,B,C,D</div></div>
+    <div class="card"><h3>Banana Heaven</h3><p>Nutella, Keks-Crunch, Banane</p><div class="price">5,50 €</div><div class="allergen">1,2,3,4,5,A,B,C,D,E</div></div>
+    <div class="card"><h3>Strawberry Love</h3><p>Nutella, Keks-Crunch, Erdbeeren</p><div class="price">6,20 €</div><div class="allergen">1,2,3,4,5,A,B,C,D,E</div></div>
+    <div class="card"><h3>White Delight</h3><p>Bueno Creme, Keks-Crunch, saure Kirschen</p><div class="price">5,70 €</div><div class="allergen">1,2,3,4,A,B,C,D</div></div>
+    <div class="card"><h3>Pistachio Cream</h3><p>Pistaziencreme, Himbeeren, Keks-Crunch</p><div class="price">8,20 €</div><div class="allergen">1,2,3,4,A,B,C,D</div></div>
+    <div class="card"><h3>Kinder Magic</h3><p>Nutella, Kinder Bueno, Keks-Crunch</p><div class="price">7,50 €</div><div class="allergen">1,2,3,4,5,A,B,C,D,E</div></div>
+    <div class="card"><h3>Coco White</h3><p>Bueno Creme, Himbeeren, Kokosraspeln</p><div class="price">6,00 €</div><div class="allergen">1,2,3,A,B,C</div></div>
+    <div class="card"><h3>Sweet Mix</h3><p>Nutella, M&M's</p><div class="price">7,00 €</div><div class="allergen">1,2,3,4,5,A,B,C,D,E</div></div>
+    <div class="card"><h3>Cherry Kiss</h3><p>Nutella, Keks-Crunch, Kirschen</p><div class="price">6,20 €</div><div class="allergen">1,2,3,4,5,A,B,C,D,E</div></div>
+    <div class="card"><h3>Eis</h3><p>Vanille, Schokolade, Erdbeere</p><div class="price">1,00 €</div><div class="allergen">1,3,A,B</div></div>
+  </div>
+
+  <!-- HERZHAFT -->
+  <h2 id="savory" class="category-title"><i class="fas fa-cheese"></i> Herzhaftes</h2>
+  <div class="menu-grid">
+    <div class="card"><h3>Ham - Cheese Crêpe</h3><p>Puten-Schinken, Gouda, Tomate, saure Sahne</p><div class="price">7,00 €</div><div class="allergen">1,2,3,A,B,C</div></div>
+    <div class="card"><h3>Cheese Crêpe</h3><p>Gouda, Mozzarella, Cheddar, Edammer, saure Sahne</p><div class="price">6,50 €</div><div class="allergen">A,B,C</div></div>
+    <div class="card"><h3>Savoury Salami</h3><p>Rind-Salami, Käse, saure Sahne</p><div class="price">7,00 €</div><div class="allergen">1,2,3,A,B,C</div></div>
+  </div>
+</div>
+
+<!-- INFO BEREICH -->
+<section id="info" class="container">
+  <div class="info-grid">
+    <div class="info-card"><i class="fas fa-map-pin"></i><h3>📍 Standort</h3><p>Eisenbacher Tor<br>36341 Lauterbach (Hessen)</p></div>
+    <div class="info-card"><i class="fas fa-clock"></i><h3>🕒 Öffnungszeiten</h3><p>Mo–Fr: 10:00 – 20:00 Uhr<br>Sa–So: 15:00 – 19:00 Uhr</p></div>
+    <div class="info-card"><i class="fas fa-leaf"></i><h3>🌿 Allergene</h3><p>1,2,3,4,5,A,B,C,D,E – wir beraten dich gern!</p></div>
+  </div>
+</section>
+
+<footer>
+  <p><i class="fas fa-heart" style="color:#e8b87a;"></i> Crêpes Haus – handgemachte Freude & moderne Genüsse</p>
+</footer>
+
+</body>
+</html>
