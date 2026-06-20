@@ -1,0 +1,259 @@
+Jetzt <!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crêpes Haus · Waffeln & Crêpes</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0d0d0d;
+      color: white;
+      font-family: 'Arial', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: #111;
+      padding: 15px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      z-index: 1000;
+    }
+
+    nav h2 {
+      color: #d8b26e;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+    }
+
+    nav a:hover {
+      color: #d8b26e;
+    }
+
+    .hero {
+      height: 60vh;
+      background-image: url("https://images.unsplash.com/photo-1519676867240-f03562e64548?q=80&w=1600");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.65);
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 55px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin: 15px 0;
+    }
+
+    button {
+      background: #d8b26e;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #c09b55;
+    }
+
+    #menu {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      margin: 50px 0 20px;
+      font-size: 28px;
+      border-left: 5px solid #d8b26e;
+      padding-left: 15px;
+    }
+
+    h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #171717;
+      padding: 20px;
+      border-radius: 15px;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      background: #1f1f1f;
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      color: #bbb;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .price {
+      color: #d8b26e;
+      font-weight: bold;
+      font-size: 1.3rem;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .allergen {
+      font-size: 10px;
+      color: #777;
+      margin-top: 8px;
+    }
+
+    .info {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+      text-align: center;
+      background: #111;
+      border-radius: 20px;
+      margin-top: 40px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 14px;
+      color: #888;
+    }
+
+    @media (max-width: 700px) {
+      .hero h1 { font-size: 35px; }
+      nav { flex-direction: column; }
+      nav a { margin: 0 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <h2>🥞 Crêpes Haus</h2>
+  <div>
+    <a href="#waffeln">Waffeln</a>
+    <a href="#sweet-crepes">Süße Crêpes</a>
+    <a href="#savory-crepes">Herzhaft</a>
+    <a href="#allergene">Allergene</a>
+    <a href="#contact">Kontakt</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="overlay">
+    <h1>🥞 Crêpes Haus</h1>
+    <p>Frische Waffeln • Crêpes • Eis</p>
+    <button onclick="document.getElementById('waffeln').scrollIntoView({behavior:'smooth'})">
+      Speisekarte ansehen
+    </button>
+  </div>
+</div>
+
+<section id="menu">
+  <!-- ========== WAFFELN ========== -->
+  <h2 id="waffeln">🧇 WAFFEL GENUSS</h2>
+  <div class="menu-grid">
+    <div class="card"><h3>16. FAVORITE WAFFEL</h3><p>Nutella, Vanillesauce, Erdbeeren, Bananen, Kirschen, Blaubeeren</p><div class="price">8,50 €</div><div class="allergen">A,B,C,D,E</div></div>
+    <div class="card"><h3>17. CHERRY CHOCCO</h3><p>Nutella, saftige Kirschen</p><div class="price">6,20 €</div><div class="allergen">1,2,3,4,5,A,B,C,D,E</div></div>
+    <div class="card"><h3>18. BLUEBERRY LOVE</h3><p>Nutella, Blaubeeren</p><div class="price">6,70 €</div><div class="allergen">1,2,3,4,5,A,B,C,D,E</div></div>
+    <div class="card"><h3>19. STRAWBERRY DREAM</h3><p>Nutella, Erdbeeren</p><div class="price">6,50 €</div><div class="allergen">1,2,3,4,5,A,B,C,D,E</div></div>
+    <div class="card"><h3>20. BERRY VANILLA</h3><p>Vanillesauce, Himbeeren, Bueno Creme</p><div class="price">7,80 €</div><div class="allergen">1,2,3,A,B,C</div></div>
+    <div class="card"><h3>21. CHERRY VANILLA</h3><p>Vanillesauce, fruchtige Kirschen</p><div class="price">6,20 €</div><div class="allergen">1,2,3,A,B,C</div></div>
+    <div class="card"><h3>22. BANANA CHOCCO</h3><p>Nutella, Bananen</p><div class="price">5,10 €</div><div class="allergen">1,2,3,4,5,A,B,C,D,E</div></div>
+    <div class="card"><h3>23. BLUE VANILLA</h3><p>Vanillesauce, Blaubeeren</p><div class="price">7,30 €</div><div class="allergen">1,2,3,A,B,C</div></div>
+    <div class="card"><h3>24. WAFFEL MIT ZUCKER & ZIMT</h3><p>+ Eis (Vanille/Schoko/Erdbeere) +1,00€</p><div class="price">4,20 €</div><div class="allergen">1,8,A,B</div></div>
+  </div>
+
+  <!-- ========== SÜSSE CRÊPES ========== -->
+  <h2 id="sweet-crepes">🥞 SÜSSE CRÊPES</h2>
+  <div class="menu-grid">
+    <div class="card"><h3>1. SWEET FAVORITE</h3><p>Bueno Creme, Keks-Crunch, Erdbeeren</p><div class="price">8,50 €</div><div class="allergen">1,2,3,4,5,A,B,C,D,E</div></div>
+    <div class="card"><h3>2. CHOCCO DREAM</h3><p>Kinder Schokolade, Blaubeeren</p><div class="price">8,50 €</div><div class="allergen">1,2,3,4,5,A,B,C,D,E</div></div>
+    <div class="card"><h3>3. MARMELADE CRÊPES</h3><p>Aprikose / Erdbeere</p><div class="price">4,00 €</div><div class="allergen">1,2,3,A,B,C</div></div>
+    <div class="card"><h3>4. BERRY BLISS</h3><p>Nutella, Keks-Crunch, Blaubeeren</p><div class="price">6,50 €</div><div class="allergen">1,2,3,4,5,A,B,C,D</div></div>
+    <div class="card"><h3>5. BANANA HEAVEN</h3><p>Nutella, Keks-Crunch, Banane</p><div class="price">5,50 €</div><div class="allergen">1,2,3,4,5,A,B,C,D,E</div></div>
+    <div class="card"><h3>6. STRAWBERRY LOVE</h3><p>Nutella, Keks-Crunch, Erdbeeren</p><div class="price">6,20 €</div><div class="allergen">1,2,3,4,5,A,B,C,D,E</div></div>
+    <div class="card"><h3>7. WHITE DELIGHT</h3><p>Bueno Creme, Keks-Crunch, saure Kirschen</p><div class="price">5,70 €</div><div class="allergen">1,2,3,4,A,B,C,D</div></div>
+    <div class="card"><h3>8. PISTACHIO CREAM</h3><p>Pistaziencreme, Himbeeren, Keks-Crunch</p><div class="price">8,20 €</div><div class="allergen">1,2,3,4,A,B,C,D</div></div>
+    <div class="card"><h3>9. KINDER MAGIC</h3><p>Nutella, Kinder Bueno, Keks-Crunch</p><div class="price">7,50 €</div><div class="allergen">1,2,3,4,5,A,B,C,D,E</div></div>
+    <div class="card"><h3>10. COCO WHITE</h3><p>Bueno Creme, Himbeeren, Kokosraspeln</p><div class="price">6,00 €</div><div class="allergen">1,2,3,A,B,C</div></div>
+    <div class="card"><h3>11. SWEET MIX</h3><p>Nutella, M&M's</p><div class="price">7,00 €</div><div class="allergen">1,2,3,4,5,A,B,C,D,E</div></div>
+    <div class="card"><h3>12. CHERRY KISS</h3><p>Nutella, Keks-Crunch, Kirschen</p><div class="price">6,20 €</div><div class="allergen">1,2,3,4,5,A,B,C,D,E</div></div>
+    <div class="card"><h3>+ EIS</h3><p>Vanille, Schokolade, Erdbeere</p><div class="price">1,00 €</div><div class="allergen">1,3,A,B</div></div>
+  </div>
+
+  <!-- ========== HERZHAFTE CRÊPES ========== -->
+  <h2 id="savory-crepes">🧀 HERZHAFTE CRÊPES</h2>
+  <div class="menu-grid">
+    <div class="card"><h3>1. HAM - CHEESE CRÊPE</h3><p>Hähnchen/Puten-Schinken, Gouda, Tomate, saure Sahne</p><div class="price">7,00 €</div><div class="allergen">1,2,3,A,B,C</div></div>
+    <div class="card"><h3>2. CHEESE CRÊPE</h3><p>Gouda, Mozzarella, Cheddar, Edammer, saure Sahne</p><div class="price">6,50 €</div><div class="allergen">A,B,C</div></div>
+    <div class="card"><h3>3. SAVOURY SALAMI</h3><p>Rind-Salami, Käse, saure Sahne</p><div class="price">7,00 €</div><div class="allergen">1,2,3,A,B,C</div></div>
+  </div>
+</section>
+
+<!-- ALLERGEN LISTEN -->
+<section id="allergene" class="info">
+  <h2>📋 ALLERGEN LISTE</h2>
+  <p>1. GLUTEN | 2. EIER | 3. MILCH/LAKTOSE | 4. NÜSSE (Hasel, Pistazie) | 5. SOJA | 6. SELLERIE | 7. SENF | 8. SESAM | 9. SULFITE</p>
+
+  <h2 style="margin-top:30px">📋 ZUSATZSTOFFE LISTE</h2>
+  <p>A. GLUTENHALTIG | B. ENTHÄLT KIRSCHEN | C. ENTHÄLT EIER | D. ENTHÄLT FISCH | E. ENTHÄLT ERDNÜSE | F. ENTHÄLT SOJA | G. ENTHÄLT MILCH | I. ENTHÄLT SELLERIE | J. ENTHÄLT SENF | K. ENTHÄLT SESAM | L. ENTHÄLT SULFITE | M. ENTHÄLT LUPINEN | N. ENTHÄLT WEICHTER</p>
+</section>
+
+<!-- STANDORT & ÖFFNUNGSZEITEN -->
+<section id="contact" class="info">
+  <h2>📍 Standort</h2>
+  <p>Eisenbacher Tor<br>36341 Lauterbach (Hessen)</p>
+  <h2>🕒 Öffnungszeiten</h2>
+  <p>Montag – Freitag: 10:00 – 20:00 Uhr<br>Samstag – Sonntag: 15:00 – 19:00 Uhr</p>
+</section>
+
+<footer>
+  <p>🥞 Crêpes Haus – Frische Waffeln & Crêpes</p>
+</footer>
+
+</body>
+</html>
