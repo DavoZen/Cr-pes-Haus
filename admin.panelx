@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel · Crêpes Haus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #0d0d0d;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+        h1 {
+            color: #d8b26e;
+            border-left: 4px solid #d8b26e;
+            padding-left: 16px;
+            margin-bottom: 30px;
+        }
+        input,
+        button {
+            padding: 10px;
+            margin: 6px;
+            border-radius: 10px;
+            border: none;
+            font-size: 14px;
+        }
+        button {
+            background: #d8b26e;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .item {
+            background: #1a1a1a;
+            padding: 12px 16px;
+            margin: 10px 0;
+            border-radius: 14px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .item span {
+            flex: 1;
+            min-width: 120px;
+        }
+        .item input {
+            width: 80px;
+            background: #2a2a2a;
+            color: white;
+        }
+        .qr {
+            margin-top: 40px;
+            text-align: center;
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 20px;
+        }
+        .qr img {
+            width: 200px;
+            height: 200px;
+            border-radius: 16px;
+            margin-top: 10px;
+        }
+        .add-section {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+        .add-section input {
+            width: auto;
+            flex: 1;
+            background: #2a2a2a;
+            color: white;
+        }
+        .flex-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px;
+        }
+        .delete-btn {
+            background: #b33;
+            color: white;
+        }
+        .delete-btn:hover {
+            background: #a22;
+        }
+        .save-btn {
+            background: #2a6b3a;
+            color: white;
+        }
+        .save-btn:hover {
+            background: #3a8a4a;
+        }
+        .logout-btn {
+            background: #444;
+            color: white;
+            margin-top: 20px;
+            padding: 12px 30px;
+        }
+        .logout-btn:hover {
+            background: #555;
+        }
+        .success-msg {
+            color: #6bcb77;
+            font-size: 13px;
+            margin-left: 8px;
+        }
+        #loginOverlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        .login-box {
+            background: #1a1a1a;
+            padding: 40px;
+            border-radius: 24px;
+            text-align: center;
+            max-width: 380px;
+            width: 100%;
+        }
+        .login-box h2 {
+            color: #d8b26e;
+            margin-bottom: 10px;
+        }
+        .login-box input {
+            width: 100%;
+            padding: 14px;
+            margin: 12px 0;
+            background: #2a2a2a;
+            color: white;
+        }
+        .login-box button {
+            width: 100%;
+            padding: 14px;
+        }
+        .error-msg {
+            color: #ff6b6b;
+            margin-top: 10px;
+        }
+        #adminPanel {
+            display: none;
+        }
+        @media (max-width: 600px) {
+            .item {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .item input {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- LOGIN OVERLAY -->
+    <div id="loginOverlay">
+        <div class="login-box">
+            <h2>🔐 Admin Login</h2>
+            <p style="color:#aaa;">Crêpes Haus · Verwaltung</p>
+            <input type="password" id="passwordInput" placeholder="Passwort eingeben">
+            <button onclick="checkPassword()">Login</button>
+            <div id="errorMsg" class="error-msg"></div>
+        </div>
+    </div>
+
+    <!-- ADMIN PANEL (wird nach Login angezeigt) -->
+    <div id="adminPanel">
+        <div class="container">
+            <h1>🛠️ Admin Panel · Crêpes Haus</h1>
+
+            <!-- Menü Liste -->
+            <div id="menuList"></div>
+
+            <!-- Neues Item hinzufügen -->
+            <div class="add-section">
+                <h3 style="color:#d8b26e; margin-bottom:12px;">➕ Neues Menü-Item</h3>
+                <div class="flex-row">
+                    <input type="text" id="newName" placeholder="Name (z.B. Favorite Waffel)">
+                    <input type="text" id="newPrice" placeholder="Preis (z.B. 8.50)" style="width:100px;">
+                    <input type="text" id="newCategory" placeholder="Kategorie (z.B. Waffeln)" style="width:120px;">
+                    <button onclick="addItem()" style="background:#d8b26e;">Hinzufügen</button>
+                </div>
+            </div>
+
+            <!-- QR-Code -->
+            <div class="qr">
+                <h3>📱 QR-Code für Bestellungen</h3>
+                <img id="qrImage" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://crepes-haus.de" alt="QR Code">
+                <br>
+                <button onclick="changeQR()" style="margin-top:12px;">QR-Code URL ändern</button>
+            </div>
+
+            <!-- Logout -->
+            <div style="text-align:center; margin-top:30px;">
+                <button class="logout-btn" onclick="logout()">🚪 Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ============================================================
+        // PASSSWORD – HIER ÄNDERN!
+        // ============================================================
+        const ADMIN_PASSWORD = "admin123";
+
+        // ============================================================
+        // LOGIN
+        // ============================================================
+        function checkPassword() {
+            const input = document.getElementById('passwordInput').value;
+            if (input === ADMIN_PASSWORD) {
+                document.getElementById('loginOverlay').style.display = 'none';
+                document.getElementById('adminPanel').style.display = 'block';
+                loadMenu();
+            } else {
+                document.getElementById('errorMsg').innerText = '❌ Falsches Passwort';
+            }
+        }
+
+        function logout() {
+            document.getElementById('loginOverlay').style.display = 'flex';
+            document.getElementById('adminPanel').style.display = 'none';
+            document.getElementById('passwordInput').value = '';
+            document.getElementById('errorMsg').innerText = '';
+        }
+
+        // ============================================================
+        // LOCAL STORAGE – DATEN SPEICHERN
+        // ============================================================
+        function getMenu() {
+            const data = localStorage.getItem('cafeMenu');
+            if (data) return JSON.parse(data);
+            // Standard-Menü (wird beim ersten Start angelegt)
+            const defaultMenu = [
+                { id: 1, name: 'Favorite Waffel', price: '8.50', category: 'Waffeln' },
+                { id: 2, name: 'Cherry Chocco', price: '6.20', category: 'Waffeln' },
+                { id: 3, name: 'Sweet Favorite', price: '8.50', category: 'Süße Crêpes' },
+                { id: 4, name: 'Ham - Cheese Crêpe', price: '7.00', category: 'Herzhaft' },
+            ];
+            localStorage.setItem('cafeMenu', JSON.stringify(defaultMenu));
+            return defaultMenu;
+        }
+
+        function saveMenu(menu) {
+            localStorage.setItem('cafeMenu', JSON.stringify(menu));
+        }
+
+        // ============================================================
+        // MENÜ ANZEIGEN
+        // ============================================================
+        function loadMenu() {
+            const menu = getMenu();
+            const container = document.getElementById('menuList');
+            if (menu.length === 0) {
+                container.innerHTML = '<p style="color:#888;">Keine Items im Menü. Füge etwas hinzu!</p>';
+                return;
+            }
+            container.innerHTML = menu.map(item => `
+                <div class="item" data-id="${item.id}">
+                    <span><strong>${item.name}</strong> <span style="color:#888;font-size:13px;">(${item.category})</span></span>
+                    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+                        <input type="text" value="${item.price}" id="price_${item.id}" style="width:70px;">
+                        <button class="save-btn" onclick="updatePrice(${item.id})">💾 Speichern</button>
+                        <button class="delete-btn" onclick="deleteItem(${item.id})">🗑️</button>
+                        <span id="saveMsg_${item.id}" class="success-msg"></span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // ============================================================
+        // PREIS SPEICHERN
+        // ============================================================
+        function updatePrice(id) {
+            const menu = getMenu();
+            const item = menu.find(i => i.id === id);
+            if (!item) return;
+            const newPrice = document.getElementById('price_' + id).value;
+            item.price = newPrice;
+            saveMenu(menu);
+            const msg = document.getElementById('saveMsg_' + id);
+            msg.innerText = '✅ ' + newPrice + ' €';
+            setTimeout(() => { msg.innerText = ''; }, 2000);
+        }
+
+        // ============================================================
+        // NEUES ITEM HINZUFÜGEN
+        // ============================================================
+        function addItem() {
+            const name = document.getElementById('newName').value.trim();
+            const price = document.getElementById('newPrice').value.trim();
+            const category = document.getElementById('newCategory').value.trim();
+            if (!name || !price || !category) {
+                alert('Bitte Name, Preis und Kategorie ausfüllen!');
+                return;
+            }
+            const menu = getMenu();
+            const newId = menu.length > 0 ? Math.max(...menu.map(i => i.id)) + 1 : 1;
+            menu.push({ id: newId, name, price, category });
+            saveMenu(menu);
+            loadMenu();
+            // Felder leeren
+            document.getElementById('newName').value = '';
+            document.getElementById('newPrice').value = '';
+            document.getElementById('newCategory').value = '';
+        }
+
+        // ============================================================
+        // ITEM LÖSCHEN
+        // ============================================================
+        function deleteItem(id) {
+            if (!confirm('Wirklich löschen?')) return;
+            let menu = getMenu();
+            menu = menu.filter(i => i.id !== id);
+            saveMenu(menu);
+            loadMenu();
+        }
+
+        // ============================================================
+        // QR-CODE URL ÄNDERN
+        // ============================================================
+        function changeQR() {
+            const newUrl = prompt('Gib die neue URL für den QR-Code ein:', 'https://crepes-haus.de');
+            if (newUrl) {
+                const img = document.getElementById('qrImage');
+                img.src = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(newUrl);
+            }
+        }
+
+        // ============================================================
+        // BEIM LADEN – LOGIN ANZEIGEN
+        // ============================================================
+        document.getElementById('loginOverlay').style.display = 'flex';
+        document.getElementById('adminPanel').style.display = 'none';
+    </script>
+
+</body>
+</html>
