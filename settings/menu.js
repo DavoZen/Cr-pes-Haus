@@ -199,7 +199,7 @@ window.MENU_DATA = {
           "desc": "Gouda, Mozzarella, Cheddar, Edammer, saure Sahne",
           "id": 24,
           "name": "Cheese Crêpe",
-          "price": "2.50"
+          "price": "6.50"
         },
         {
           "allergens": "1 2 3 A B C",
