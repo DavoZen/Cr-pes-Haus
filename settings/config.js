@@ -1,6 +1,6 @@
 // ============================================================
-// SETTINGS — основний файл конфігурації
-// Редагуйте цей файл для зміни: назва, контакти, зображення, шрифти
+// SETTINGS - main configuration file
+// Edit this file to change: name, contacts, images, fonts
 // ============================================================
 window.SETTINGS_CFG = {
   "defaultLang": "de",
