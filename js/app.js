@@ -51,26 +51,6 @@
     });
   }
 
-  // ─── Статистика ────────────────────────────────────────────
-  function renderStats() {
-    const t = window.I18N && window.I18N.t ? window.I18N : { t: function (k) { return k; } };
-    const container = document.getElementById('statsBar');
-    if (!container) return;
-
-    const items = [
-      { num: t.t('stat1_num'), label: t.t('stat1_label') },
-      { num: t.t('stat2_num'), label: t.t('stat2_label') },
-      { num: t.t('stat3_num'),  label: t.t('stat3_label') }
-    ];
-
-    container.innerHTML = items.map(function (s) {
-      return '<div class="stat-item">' +
-        '<span class="stat-num">' + escapeHtml(s.num) + '</span>' +
-        '<span class="stat-label">' + escapeHtml(s.label) + '</span>' +
-      '</div>';
-    }).join('');
-  }
-
   // ─── Алергени ──────────────────────────────────────────────
   function renderAllergens() {
     const t = window.I18N && window.I18N.t ? window.I18N : { t: function (k) { return k; } };
@@ -160,7 +140,6 @@
   function init() {
     seedStorage();
     renderMenu();
-    renderStats();
     renderAllergens();
     renderContact();
     renderCTA();

@@ -20,11 +20,6 @@ window.SITE_TEXT.en = {
   hero_cta1: 'View menu',
   hero_cta2: 'Visit us',
 
-  // ─── GALLERY ──────────────────────────────────────────────
-  gallery_title: 'Gallery',
-  gallery_sub: 'Moments & Dishes',
-  gallery_prev: 'Previous',
-  gallery_next: 'Next',
 
   // ─── MENU ─────────────────────────────────────────────────
   menu_title: 'Our Menu',
@@ -33,14 +28,6 @@ window.SITE_TEXT.en = {
   menu_cat_sweet: 'Sweet Crêpes',
   menu_cat_savory: 'Savory',
   menu_price_from: 'from',
-
-  // ─── STATS ────────────────────────────────────────────────
-  stat1_num: '25+',
-  stat1_label: 'Crêpes & Waffles',
-  stat2_num: '100%',
-  stat2_label: 'Fresh ingredients daily',
-  stat3_num: 'Pro',
-  stat3_label: 'Handmade with love',
 
   // ─── ALLERGENS ────────────────────────────────────────────
   allergens_title: 'Allergen & Additive List',

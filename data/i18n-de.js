@@ -20,11 +20,6 @@ window.SITE_TEXT.de = {
   hero_cta1: 'Karte ansehen',
   hero_cta2: 'Besuchen Sie uns',
 
-  // ─── GALLERIE ─────────────────────────────────────────────
-  gallery_title: 'Galerie',
-  gallery_sub: 'Momente & Gerichte',
-  gallery_prev: 'Zurück',
-  gallery_next: 'Weiter',
 
   // ─── MENÜ ─────────────────────────────────────────────────
   menu_title: 'Unsere Speisekarte',
@@ -33,14 +28,6 @@ window.SITE_TEXT.de = {
   menu_cat_sweet: 'Süße Crêpes',
   menu_cat_savory: 'Herzhaft',
   menu_price_from: 'ab',
-
-  // ─── STATS ────────────────────────────────────────────────
-  stat1_num: '25+',
-  stat1_label: 'Crêpes & Waffeln',
-  stat2_num: '100%',
-  stat2_label: 'Frische Zutaten täglich',
-  stat3_num: 'Pro',
-  stat3_label: 'Liebevoll von Hand zubereitet',
 
   // ─── ALLERGENE ────────────────────────────────────────────
   allergens_title: 'Allergen- & Zusatzstoff-Liste',

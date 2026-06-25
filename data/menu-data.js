@@ -21,6 +21,43 @@ window.MENU_DATA = {
   siteName: "Crêpes Haus",
   tagline: "Frische Waffeln · Knusprige Crêpes · Hausgemachtes Eis",
 
+  allergens: {
+    groups: [
+      {
+        name: "allergens_group_allergens",
+        list: [
+          "1. GLUTEN",
+          "2. EIER",
+          "3. MILCH/LAKTOSE",
+          "4. NÜSSE (Hasel, Pistazie)",
+          "5. SOJA",
+          "6. SELLERIE",
+          "7. SENF",
+          "8. SESAM",
+          "9. SULFITE"
+        ]
+      },
+      {
+        name: "allergens_group_additives",
+        list: [
+          "A. GLUTENHALTIG",
+          "B. ENTHÄLT KIRSCHEN",
+          "C. ENTHÄLT EIER",
+          "D. ENTHÄLT FISCH",
+          "E. ENTHÄLT ERDNÜSSE",
+          "F. ENTHÄLT SOJA",
+          "G. ENTHÄLT MILCH",
+          "I. ENTHÄLT SELLERIE",
+          "J. ENTHÄLT SENF",
+          "K. ENTHÄLT SESAM",
+          "L. ENTHÄLT SULFITE",
+          "M. ENTHÄLT LUPINEN",
+          "N. ENTHÄLT WEICHTER"
+        ]
+      }
+    ]
+  },
+
   categories: [
     {
       id: "waffeln",
