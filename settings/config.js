@@ -4,8 +4,14 @@
 // ============================================================
 window.SETTINGS_CFG = {
   "defaultLang": "de",
-  "langs": ["de", "en"],
-  "langNames": { "de": "Deutsch", "en": "English" },
+  "langs": [
+    "de",
+    "en"
+  ],
+  "langNames": {
+    "de": "Deutsch",
+    "en": "English"
+  },
   "storageKey": "siteLang",
   "menuStorageKey": "cafeMenuOverride",
   "site": {
@@ -16,8 +22,12 @@ window.SETTINGS_CFG = {
     "fontsUrl": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
   },
   "contact": {
-    "address": ["Eisenbacher Tor", "36341 Lauterbach (Hessen)", "Deutschland"],
-    "phone": "+49 (0) 6641 / 123456",
+    "address": [
+      "Eisenbacher Tor",
+      "36341 Lauterbach (Hessen)",
+      "Deutschland"
+    ],
+    "phone": "+00 (0) 0000 / 000000",
     "email": "info@crepes-haus.de"
   }
 };
