@@ -206,7 +206,7 @@ window.MENU_DATA = {
           "desc": "Rind-Salami, Käse, saure Sahne",
           "id": 25,
           "name": "Savoury Salami",
-          "price": "7.90"
+          "price": "7.00"
         }
       ],
       "name": "Herzhaft"
