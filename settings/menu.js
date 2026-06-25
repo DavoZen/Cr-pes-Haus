@@ -1,6 +1,6 @@
 // ============================================================
-// MENU — категорії, страви, ціни, алергени
-// Редагуйте цей файл для зміни меню
+// MENU - categories, dishes, prices, allergens
+// Edit this file to change the menu
 // ============================================================
 window.MENU_DATA = {
   "siteName": "Crêpes Haus",
@@ -206,7 +206,7 @@ window.MENU_DATA = {
           "desc": "Rind-Salami, Käse, saure Sahne",
           "id": 25,
           "name": "Savoury Salami",
-          "price": "7.00"
+          "price": "7.90"
         },
         {
           "allergens": "1 2 3 7 A",
