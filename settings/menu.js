@@ -210,6 +210,20 @@ window.MENU_DATA = {
         }
       ],
       "name": "Herzhaft"
+    },
+    {
+      "icon": "",
+      "id": "4",
+      "items": [
+        {
+          "allergens": "",
+          "desc": "",
+          "id": 27,
+          "name": "Coca Cola",
+          "price": "2.00"
+        }
+      ],
+      "name": "getränke"
     }
   ],
   "allergens": {
