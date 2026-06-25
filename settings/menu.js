@@ -207,13 +207,6 @@ window.MENU_DATA = {
           "id": 25,
           "name": "Savoury Salami",
           "price": "7.90"
-        },
-        {
-          "allergens": "1 2 3 7 A",
-          "desc": "llalala",
-          "id": 26,
-          "name": "mayo",
-          "price": "5.00"
         }
       ],
       "name": "Herzhaft"
