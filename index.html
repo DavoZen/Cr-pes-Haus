@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="page_title">Crêpes Haus</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="ambient-orb"></div>
+<div class="subtle-noise"></div>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="#" class="logo">
+      Crêpes <span style="color: var(--gold);">Haus</span>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#waffeln" data-i18n="nav_waffeln" onclick="closeNav()">Waffeln</a></li>
+      <li><a href="#sweet-crepes" data-i18n="nav_sweet" onclick="closeNav()">Süße Crêpes</a></li>
+      <li><a href="#savory-crepes" data-i18n="nav_savory" onclick="closeNav()">Herzhaft</a></li>
+
+      <li><a href="#allergene" data-i18n="nav_allergens" onclick="closeNav()">Allergene</a></li>
+      <li><a href="#contact" data-i18n="nav_contact" onclick="closeNav()">Kontakt</a></li>
+      <li><a href="about.html" data-i18n="nav_about" onclick="closeNav()">Über uns</a></li>
+      <li>
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-btn active" data-lang-btn="de" data-i18n="lang_de" onclick="I18N.setLang('de')">DE</button>
+          <button class="lang-btn" data-lang-btn="en" data-i18n="lang_en" onclick="I18N.setLang('en')">EN</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-badge" data-i18n="hero_badge">Frisch gemacht mit Liebe</span>
+    <h1 data-i18n="hero_title">Crêpes <span class="gold">Haus</span></h1>
+    <p class="subtitle" data-i18n="hero_sub">
+      Frische Waffeln · Knusprige Crêpes · Hausgemachtes Eis —<br>direkt aus Lauterbach, Hessen
+    </p>
+    <div class="btn-group">
+      <a href="#waffeln" class="btn" data-i18n="hero_cta1">Karte ansehen ↓</a>
+      <a href="#contact" class="btn btn-outline" data-i18n="hero_cta2">Besuchen Sie uns</a>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ========== MENU ========== -->
+<main id="menu" class="section">
+  <div class="section-header">
+    <h2 data-i18n="menu_title">Unsere Speisekarte</h2>
+    <p data-i18n="menu_sub">Vollendeter Genuss — jeden Tag frisch zubereitet</p>
+  </div>
+
+  <div class="menu-category" id="waffeln">
+    <h3 class="menu-category-title" id="title-waffeln"></h3>
+    <div class="menu-grid" id="grid-waffeln"></div>
+  </div>
+
+  <div class="menu-category" id="sweet-crepes">
+    <h3 class="menu-category-title" id="title-sweet-crepes"></h3>
+    <div class="menu-grid" id="grid-sweet-crepes"></div>
+  </div>
+
+  <div class="menu-category" id="savory-crepes">
+    <h3 class="menu-category-title" id="title-savory-crepes"></h3>
+    <div class="menu-grid" id="grid-savory-crepes"></div>
+  </div>
+</main>
+
+<div class="section-divider"><div class="line"></div></div>
+
+<!-- ========== ALLERGENE ========== -->
+<section id="allergene" class="info-section">
+  <h2 data-i18n="allergens_title">Allergen- & Zusatzstoff-Liste</h2>
+  <p data-i18n="allergens_sub">Transparente Information — für Ihr Wohlbefinden</p>
+  <div class="info-grid" id="allergeneContent"></div>
+</section>
+
+<!-- ========== KONTAKT ========== -->
+<section id="contact" class="info-section">
+  <h2 data-i18n="contact_title">Standort & Öffnungszeiten</h2>
+  <p data-i18n="contact_sub">Wir freuen uns auf Ihren Besuch — direkt am Eisenbacher Tor in Lauterbach</p>
+  <div class="info-grid" id="contactContent"></div>
+  <a href="#" class="btn btn-outline" data-i18n="contact_btn">Jetzt anrufen & reservieren</a>
+</section>
+
+<!-- ========== CTA ========== -->
+<section class="cta-section" id="ctaContent"></section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="footer-content">
+    <a href="#" class="logo">Crêpes <span style="color: var(--gold);">Haus</span></a>
+    <ul class="footer-links">
+      <li><a href="#waffeln">Waffeln</a></li>
+      <li><a href="#sweet-crepes">Süße Crêpes</a></li>
+      <li><a href="#savory-crepes">Herzhaft</a></li>
+      <li><a href="#contact">Kontakt</a></li>
+      <li><a href="about.html">Über uns</a></li>
+    </ul>
+    <div class="footer-bottom">
+      <span data-i18n="footer_since">© 2025</span> <span style="color: var(--gold); font-weight: 600;">Crêpes Haus</span> · <span data-i18n="footer_slogan">Frische Waffeln & Crêpes aus Lauterbach</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== SCRIPTS ========== -->
+<script src="data/menu-data.js"></script>
+<script src="js/i18n-config.js"></script>
+<script src="data/i18n-de.js"></script>
+<script src="data/i18n-en.js"></script>
+<script src="js/i18n.js"></script>
+
+<script src="js/app.js"></script>
+<script>
+  window.closeNav = function () {
+    document.getElementById('hamburger').classList.remove('active');
+    document.getElementById('navLinks').classList.remove('active');
+  };
+
+  document.getElementById('hamburger').addEventListener('click', function () {
+    this.classList.toggle('active');
+    document.getElementById('navLinks').classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>
