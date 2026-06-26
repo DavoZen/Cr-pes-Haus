@@ -7,7 +7,7 @@ window.MENU_DATA = {
   "tagline": "Frische Waffeln · Knusprige Crêpes · Hausgemachtes Eis",
   "contact": {
     "address": [
-      "Eisenbacher Tor",
+      "Eisenbacher Tor 9",
       "36341 Lauterbach (Hessen)",
       "Deutschland"
     ],
