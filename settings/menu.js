@@ -210,6 +210,20 @@ window.MENU_DATA = {
         }
       ],
       "name": "Herzhaft"
+    },
+    {
+      "icon": "",
+      "id": "4",
+      "items": [
+        {
+          "allergens": "",
+          "desc": "",
+          "id": 1,
+          "name": "co",
+          "price": "200.00"
+        }
+      ],
+      "name": "getränk"
     }
   ],
   "allergens": {
