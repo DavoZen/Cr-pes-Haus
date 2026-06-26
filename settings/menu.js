@@ -6,7 +6,11 @@ window.MENU_DATA = {
   "siteName": "Crêpes Haus",
   "tagline": "Frische Waffeln · Knusprige Crêpes · Hausgemachtes Eis",
   "contact": {
-    "address": ["Eisenbacher Tor", "36341 Lauterbach (Hessen)", "Deutschland"],
+    "address": [
+      "Eisenbacher Tor",
+      "36341 Lauterbach (Hessen)",
+      "Deutschland"
+    ],
     "phone": "+47 (0) 6641 / 123459",
     "email": "info@crepes-haus.de"
   },
@@ -14,104 +18,380 @@ window.MENU_DATA = {
     {
       "icon": "waffle",
       "id": "waffeln",
-      "name": "Waffel Genuss",
       "items": [
-        { "id": 1, "name": "Favorite Waffel", "desc": "Nutella, Vanillesauce, Erdbeeren, Bananen, Kirschen, Blaubeeren", "price": "8.50", "allergens": "A B C D E" },
-        { "id": 2, "name": "Cherry Chocco", "desc": "Nutella, saftige Kirschen", "price": "6.20", "allergens": "1 2 3 4 5 A B C D E" },
-        { "id": 3, "name": "Blueberry Love", "desc": "Nutella, Blaubeeren", "price": "6.70", "allergens": "1 2 3 4 5 A B C D E" },
-        { "id": 4, "name": "Strawberry Dream", "desc": "Nutella, Erdbeeren", "price": "6.50", "allergens": "1 2 3 4 5 A B C D E" },
-        { "id": 5, "name": "Berry Vanilla", "desc": "Vanillesauce, Himbeeren, Bueno Creme", "price": "7.80", "allergens": "1 2 3 A B C" },
-        { "id": 6, "name": "Cherry Vanilla", "desc": "Vanillesauce, fruchtige Kirschen", "price": "6.20", "allergens": "1 2 3 A B C" },
-        { "id": 7, "name": "Banana Chocco", "desc": "Nutella, Bananen", "price": "5.10", "allergens": "1 2 3 4 5 A B C D E" },
-        { "id": 8, "name": "Blue Vanilla", "desc": "Vanillesauce, Blaubeeren", "price": "7.30", "allergens": "1 2 3 A B C" },
-        { "id": 9, "name": "Zucker & Zimt", "desc": "+ Eis (Vanille / Schokolade / Erdbeere) +1,00 €", "price": "4.20", "allergens": "1 8 A B" }
-      ]
+        {
+          "allergens": "A B C D E",
+          "desc": "Nutella, Vanillesauce, Erdbeeren, Bananen, Kirschen, Blaubeeren",
+          "id": 1,
+          "name": "Favorite Waffel",
+          "price": "8.50"
+        },
+        {
+          "allergens": "1 2 3 4 5 A B C D E",
+          "desc": "Nutella, saftige Kirschen",
+          "id": 2,
+          "name": "Cherry Chocco",
+          "price": "6.20"
+        },
+        {
+          "allergens": "1 2 3 4 5 A B C D E",
+          "desc": "Nutella, Blaubeeren",
+          "id": 3,
+          "name": "Blueberry Love",
+          "price": "6.70"
+        },
+        {
+          "allergens": "1 2 3 4 5 A B C D E",
+          "desc": "Nutella, Erdbeeren",
+          "id": 4,
+          "name": "Strawberry Dream",
+          "price": "6.50"
+        },
+        {
+          "allergens": "1 2 3 A B C",
+          "desc": "Vanillesauce, Himbeeren, Bueno Creme",
+          "id": 5,
+          "name": "Berry Vanilla",
+          "price": "7.80"
+        },
+        {
+          "allergens": "1 2 3 A B C",
+          "desc": "Vanillesauce, fruchtige Kirschen",
+          "id": 6,
+          "name": "Cherry Vanilla",
+          "price": "6.20"
+        },
+        {
+          "allergens": "1 2 3 4 5 A B C D E",
+          "desc": "Nutella, Bananen",
+          "id": 7,
+          "name": "Banana Chocco",
+          "price": "5.10"
+        },
+        {
+          "allergens": "1 2 3 A B C",
+          "desc": "Vanillesauce, Blaubeeren",
+          "id": 8,
+          "name": "Blue Vanilla",
+          "price": "7.30"
+        },
+        {
+          "allergens": "1 8 A B",
+          "desc": "+ Eis (Vanille / Schokolade / Erdbeere) +1,00 €",
+          "id": 9,
+          "name": "Zucker & Zimt",
+          "price": "4.20"
+        }
+      ],
+      "name": "Waffel Genuss"
     },
     {
       "icon": "crepe",
       "id": "sweet-crepes",
-      "name": "Süsse Crêpes",
       "items": [
-        { "id": 10, "name": "Sweet Favorite", "desc": "Bueno Creme, Keks-Crunch, Erdbeeren", "price": "8.50", "allergens": "1 2 3 4 5 A B C D E" },
-        { "id": 11, "name": "Chocco Dream", "desc": "Kinder Schokolade, Blaubeeren", "price": "8.50", "allergens": "1 2 3 4 5 A B C D E" },
-        { "id": 12, "name": "Marmelade Crêpes", "desc": "Aprikose / Erdbeere", "price": "4.00", "allergens": "1 2 3 A B C" },
-        { "id": 13, "name": "Berry Bliss", "desc": "Nutella, Keks-Crunch, Blaubeeren", "price": "6.50", "allergens": "1 2 3 4 5 A B C D" },
-        { "id": 14, "name": "Banana Heaven", "desc": "Nutella, Keks-Crunch, Banane", "price": "5.50", "allergens": "1 2 3 4 5 A B C D E" },
-        { "id": 15, "name": "Strawberry Love", "desc": "Nutella, Keks-Crunch, Erdbeeren", "price": "6.20", "allergens": "1 2 3 4 5 A B C D E" },
-        { "id": 16, "name": "White Delight", "desc": "Bueno Creme, Keks-Crunch, saure Kirschen", "price": "5.70", "allergens": "1 2 3 4 A B C D" },
-        { "id": 17, "name": "Pistachio Cream", "desc": "Pistaziencreme, Himbeeren, Keks-Crunch", "price": "8.20", "allergens": "1 2 3 4 A B C D" },
-        { "id": 18, "name": "Kinder Magic", "desc": "Nutella, Kinder Bueno, Keks-Crunch", "price": "7.50", "allergens": "1 2 3 4 5 A B C D E" },
-        { "id": 19, "name": "Coco White", "desc": "Bueno Creme, Himbeeren, Kokosraspeln", "price": "6.00", "allergens": "1 2 3 A B C" },
-        { "id": 20, "name": "Sweet Mix", "desc": "Nutella, M&M's", "price": "7.00", "allergens": "1 2 3 4 5 A B C D E" },
-        { "id": 21, "name": "Cherry Kiss", "desc": "Nutella, Keks-Crunch, Kirschen", "price": "6.20", "allergens": "1 2 3 4 5 A B C D E" },
-        { "id": 22, "name": "+ Eis", "desc": "Vanille · Schokolade · Erdbeere", "price": "1.00", "allergens": "1 3 A B" }
-      ]
+        {
+          "allergens": "1 2 3 4 5 A B C D E",
+          "desc": "Bueno Creme, Keks-Crunch, Erdbeeren",
+          "id": 10,
+          "name": "Sweet Favorite",
+          "price": "8.50"
+        },
+        {
+          "allergens": "1 2 3 4 5 A B C D E",
+          "desc": "Kinder Schokolade, Blaubeeren",
+          "id": 11,
+          "name": "Chocco Dream",
+          "price": "8.50"
+        },
+        {
+          "allergens": "1 2 3 A B C",
+          "desc": "Aprikose / Erdbeere",
+          "id": 12,
+          "name": "Marmelade Crêpes",
+          "price": "4.00"
+        },
+        {
+          "allergens": "1 2 3 4 5 A B C D",
+          "desc": "Nutella, Keks-Crunch, Blaubeeren",
+          "id": 13,
+          "name": "Berry Bliss",
+          "price": "6.50"
+        },
+        {
+          "allergens": "1 2 3 4 5 A B C D E",
+          "desc": "Nutella, Keks-Crunch, Banane",
+          "id": 14,
+          "name": "Banana Heaven",
+          "price": "5.50"
+        },
+        {
+          "allergens": "1 2 3 4 5 A B C D E",
+          "desc": "Nutella, Keks-Crunch, Erdbeeren",
+          "id": 15,
+          "name": "Strawberry Love",
+          "price": "6.20"
+        },
+        {
+          "allergens": "1 2 3 4 A B C D",
+          "desc": "Bueno Creme, Keks-Crunch, saure Kirschen",
+          "id": 16,
+          "name": "White Delight",
+          "price": "5.70"
+        },
+        {
+          "allergens": "1 2 3 4 A B C D",
+          "desc": "Pistaziencreme, Himbeeren, Keks-Crunch",
+          "id": 17,
+          "name": "Pistachio Cream",
+          "price": "8.20"
+        },
+        {
+          "allergens": "1 2 3 4 5 A B C D E",
+          "desc": "Nutella, Kinder Bueno, Keks-Crunch",
+          "id": 18,
+          "name": "Kinder Magic",
+          "price": "7.50"
+        },
+        {
+          "allergens": "1 2 3 A B C",
+          "desc": "Bueno Creme, Himbeeren, Kokosraspeln",
+          "id": 19,
+          "name": "Coco White",
+          "price": "6.00"
+        },
+        {
+          "allergens": "1 2 3 4 5 A B C D E",
+          "desc": "Nutella, M&M's",
+          "id": 20,
+          "name": "Sweet Mix",
+          "price": "7.00"
+        },
+        {
+          "allergens": "1 2 3 4 5 A B C D E",
+          "desc": "Nutella, Keks-Crunch, Kirschen",
+          "id": 21,
+          "name": "Cherry Kiss",
+          "price": "6.20"
+        },
+        {
+          "allergens": "1 3 A B",
+          "desc": "Vanille · Schokolade · Erdbeere",
+          "id": 22,
+          "name": "+ Eis",
+          "price": "1.00"
+        }
+      ],
+      "name": "Süsse Crêpes"
     },
     {
       "icon": "cheese",
       "id": "savory-crepes",
-      "name": "Herzhaft",
       "items": [
-        { "id": 23, "name": "Ham – Cheese Crêpe", "desc": "Hähnchen/Puten-Schinken, Gouda, Tomate, saure Sahne", "price": "7.00", "allergens": "1 2 3 A B C" },
-        { "id": 24, "name": "Cheese Crêpe", "desc": "Gouda, Mozzarella, Cheddar, Edammer, saure Sahne", "price": "6.50", "allergens": "A B C" },
-        { "id": 25, "name": "Savoury Salami", "desc": "Rind-Salami, Käse, saure Sahne", "price": "7.00", "allergens": "1 2 3 A B C" }
-      ]
+        {
+          "allergens": "1 2 3 A B C",
+          "desc": "Hähnchen/Puten-Schinken, Gouda, Tomate, saure Sahne",
+          "id": 23,
+          "name": "Ham – Cheese Crêpe",
+          "price": "7.00"
+        },
+        {
+          "allergens": "A B C",
+          "desc": "Gouda, Mozzarella, Cheddar, Edammer, saure Sahne",
+          "id": 24,
+          "name": "Cheese Crêpe",
+          "price": "6.50"
+        },
+        {
+          "allergens": "1 2 3 A B C",
+          "desc": "Rind-Salami, Käse, saure Sahne",
+          "id": 25,
+          "name": "Savoury Salami",
+          "price": "7.00"
+        }
+      ],
+      "name": "Herzhaft"
     },
     {
       "icon": "",
       "id": "getraenke",
-      "name": "Getränke",
       "items": [
-        { "id": 1, "name": "Coca Cola", "desc": "zumbeispiel", "price": "2.25", "allergens": "" },
-        { "id": 2, "name": "Wasser", "desc": "0,5l", "price": "2.00", "allergens": "" },
-        { "id": 3, "name": "Fanta/Sprite/Mezzo Mix", "desc": "0.33l", "price": "3.50", "allergens": "" },
-        { "id": 4, "name": "Eistee(Pfirsich,Zitrone)", "desc": "0,25", "price": "3.50", "allergens": "" },
-        { "id": 5, "name": "Red Bull", "desc": "0,5l", "price": "3.00", "allergens": "" },
-        { "id": 6, "name": "Apfelschorle", "desc": "0,5l", "price": "3.40", "allergens": "" }
-      ]
+        {
+          "allergens": "",
+          "desc": "zumbeispiel",
+          "id": 1,
+          "name": "Coca Cola",
+          "price": "2.25"
+        },
+        {
+          "allergens": "",
+          "desc": "0,5l",
+          "id": 2,
+          "name": "Wasser",
+          "price": "2.00"
+        },
+        {
+          "allergens": "",
+          "desc": "0.33l",
+          "id": 3,
+          "name": "Fanta/Sprite/Mezzo Mix",
+          "price": "3.50"
+        },
+        {
+          "allergens": "",
+          "desc": "0,25",
+          "id": 4,
+          "name": "Eistee(Pfirsich,Zitrone)",
+          "price": "3.50"
+        },
+        {
+          "allergens": "",
+          "desc": "0,5l",
+          "id": 5,
+          "name": "Red Bull",
+          "price": "3.00"
+        },
+        {
+          "allergens": "",
+          "desc": "0,5l",
+          "id": 6,
+          "name": "Apfelschorle",
+          "price": "3.40"
+        }
+      ],
+      "name": "Getränke"
     },
     {
       "icon": "",
       "id": "kaffee",
-      "name": "Kaffee",
       "items": [
-        { "id": 1, "name": "Espresso", "desc": "", "price": "3.10", "allergens": "" },
-        { "id": 2, "name": "Cappucinno", "desc": "", "price": "3.50", "allergens": "" },
-        { "id": 3, "name": "Latte Macchiato", "desc": "", "price": "3.45", "allergens": "" },
-        { "id": 4, "name": "Kaffe Creme", "desc": "", "price": "3.40", "allergens": "" },
-        { "id": 5, "name": "Café au lait", "desc": "", "price": "3.80", "allergens": "" },
-        { "id": 6, "name": "Americano", "desc": "", "price": "3.15", "allergens": "" }
-      ]
+        {
+          "allergens": "",
+          "desc": "",
+          "id": 1,
+          "name": "Espresso",
+          "price": "3.10"
+        },
+        {
+          "allergens": "",
+          "desc": "",
+          "id": 2,
+          "name": "Cappucinno",
+          "price": "3.50"
+        },
+        {
+          "allergens": "",
+          "desc": "",
+          "id": 3,
+          "name": "Latte Macchiato",
+          "price": "3.45"
+        },
+        {
+          "allergens": "",
+          "desc": "",
+          "id": 4,
+          "name": "Kaffe Creme",
+          "price": "3.40"
+        },
+        {
+          "allergens": "",
+          "desc": "",
+          "id": 5,
+          "name": "Café au lait",
+          "price": "3.80"
+        },
+        {
+          "allergens": "",
+          "desc": "",
+          "id": 6,
+          "name": "Americano",
+          "price": "3.15"
+        }
+      ],
+      "name": "Kaffee"
     },
     {
       "icon": "",
       "id": "specials",
-      "name": "Specials",
       "items": [
-        { "id": 1, "name": "Nescafé", "desc": "(Milch: Kalt/Warm)", "price": "3.20", "allergens": "" },
-        { "id": 2, "name": "Balkanischer Kaffee", "desc": "", "price": "2.50", "allergens": "" }
-      ]
+        {
+          "allergens": "",
+          "desc": "(Milch: Kalt/Warm)",
+          "id": 1,
+          "name": "Nescafé",
+          "price": "3.20"
+        },
+        {
+          "allergens": "",
+          "desc": "",
+          "id": 2,
+          "name": "Balkanischer Kaffee",
+          "price": "2.50"
+        }
+      ],
+      "name": "Specials"
     },
     {
       "icon": "",
       "id": "matcha",
-      "name": "Matcha",
       "items": [
-        { "id": 1, "name": "Strawberry Matcha", "desc": "", "price": "5.50", "allergens": "" },
-        { "id": 2, "name": "Mango Matcha", "desc": "", "price": "5.50", "allergens": "" },
-        { "id": 3, "name": "Himbeere Matcha", "desc": "", "price": "5.50", "allergens": "" }
-      ]
+        {
+          "allergens": "",
+          "desc": "",
+          "id": 1,
+          "name": "Strawberry Matcha",
+          "price": "5.50"
+        },
+        {
+          "allergens": "",
+          "desc": "",
+          "id": 2,
+          "name": "Mango Matcha",
+          "price": "5.50"
+        },
+        {
+          "allergens": "",
+          "desc": "",
+          "id": 3,
+          "name": "Himbeere Matcha",
+          "price": "5.50"
+        }
+      ],
+      "name": "Matcha"
     },
     {
       "icon": "",
       "id": "tee",
-      "name": "Tee",
       "items": [
-        { "id": 1, "name": "Früchtetee", "desc": "(Pfirsich,Apfel/Zimt,Himbeere)", "price": "2.20", "allergens": "" },
-        { "id": 2, "name": "Kräuter/Grüner Tee", "desc": "", "price": "2.20", "allergens": "" },
-        { "id": 3, "name": "Schwarzer Tee", "desc": "", "price": "2.20", "allergens": "" },
-        { "id": 4, "name": "Kamillentee", "desc": "", "price": "2.20", "allergens": "" }
-      ]
+        {
+          "allergens": "",
+          "desc": "(Pfirsich,Apfel/Zimt,Himbeere)",
+          "id": 1,
+          "name": "Früchtetee",
+          "price": "2.20"
+        },
+        {
+          "allergens": "",
+          "desc": "",
+          "id": 2,
+          "name": "Kräuter/Grüner Tee",
+          "price": "2.20"
+        },
+        {
+          "allergens": "",
+          "desc": "",
+          "id": 3,
+          "name": "Schwarzer Tee",
+          "price": "2.20"
+        },
+        {
+          "allergens": "",
+          "desc": "",
+          "id": 4,
+          "name": "Kamillentee",
+          "price": "2.20"
+        }
+      ],
+      "name": "Tee"
     }
   ],
   "allergens": {
