@@ -116,6 +116,6 @@ window.SITE_TEXT_DE = {
   "desc_ham_cheese": "Hähnchen/Puten-Schinken, Gouda, Tomate, saure Sahne",
   "desc_cheese_crepe": "Gouda, Mozzarella, Cheddar, Edammer, saure Sahne",
   "desc_salami": "Rind-Salami, Käse, saure Sahne",
-  "allergen_10": "bbb",
+  "allergen_10": "выаыва",
   "add_O": "jjj"
 };
