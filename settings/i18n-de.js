@@ -14,7 +14,7 @@ window.SITE_TEXT_DE = {
   "nav_close": "Schließen",
   "hero_badge": "Frisch gemacht mit Liebe",
   "hero_title": "Crêpes <span class=\"gold\">Haus</span>",
-  "hero_sub": "Frische Crêpes · Knusprige Waffeln · Hausgemachtes Eis —<br>direkt aus Lauterbach, Hessen",
+  "hero_sub": "Frische Crêpes · Knusprige Waffeln · Direkt aus Lauterbach",
   "hero_cta1": "Karte ansehen",
   "hero_cta2": "Besuchen Sie uns",
   "menu_title": "Unsere Speisekarte",
