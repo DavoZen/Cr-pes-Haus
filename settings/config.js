@@ -27,7 +27,7 @@ window.SETTINGS_CFG = {
       "36341 Lauterbach (Hessen)",
       "Deutschland"
     ],
-    "phone": "+49 (0) 6641 / 123456",
+    "phone": "+00 (0) 6641 / 123456",
     "email": "info@crepes-haus.de"
   }
 };
