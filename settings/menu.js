@@ -258,7 +258,7 @@ window.MENU_DATA = {
           "price": "3.40"
         }
       ],
-      "name": "Wasser"
+      "name": "Getränke"
     },
     {
       "icon": "",
