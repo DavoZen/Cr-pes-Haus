@@ -23,11 +23,11 @@ window.SETTINGS_CFG = {
   },
   "contact": {
     "address": [
-      " Eisenbacher Tor 9",
+      "Eisenbacher Tor",
       "36341 Lauterbach (Hessen)",
       "Deutschland"
     ],
-    "phone": "+00 (0) 0000 / 000000",
+    "phone": "+49 (0) 6641 / 123456",
     "email": "info@crepes-haus.de"
   }
 };
