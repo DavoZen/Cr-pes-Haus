@@ -217,10 +217,10 @@ window.MENU_DATA = {
       "items": [
         {
           "allergens": "",
-          "desc": "",
+          "desc": "zumbeispiel",
           "id": 1,
-          "name": "co",
-          "price": "200.00"
+          "name": "Coca Cola",
+          "price": "2.25"
         }
       ],
       "name": "getränk"
