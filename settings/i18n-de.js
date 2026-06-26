@@ -1,6 +1,6 @@
 // ============================================================
-// I18N DE — всі тексти німецькою мовою
-// Редагуйте цей файл для зміни текстів на сайті
+// I18N DE - all texts in de
+// Edit this file to change site texts
 // ============================================================
 window.SITE_TEXT_DE = {
   "page_title": "Crêpes Haus",
@@ -67,7 +67,6 @@ window.SITE_TEXT_DE = {
   "about_feedback_sub": "Haben Sie Fragen, Anregungen oder Wünsche?<br>Wir freuen uns auf Ihre Nachricht!",
   "about_feedback_btn": "Kontakt aufnehmen",
   "about_back_btn": "→ Zur Karte",
-
   "lang_de": "DE",
   "lang_en": "EN",
   "desc_favorite_waffel": "Nutella, Vanillesauce, Erdbeeren, Bananen, Kirschen, Blaubeeren",
