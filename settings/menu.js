@@ -213,7 +213,7 @@ window.MENU_DATA = {
     },
     {
       "icon": "",
-      "id": "4",
+      "id": "2",
       "items": [
         {
           "allergens": "",
@@ -221,9 +221,177 @@ window.MENU_DATA = {
           "id": 1,
           "name": "Coca Cola",
           "price": "2.25"
+        },
+        {
+          "allergens": "",
+          "desc": "0,5l",
+          "id": 2,
+          "name": "Wasser",
+          "price": "2.00"
+        },
+        {
+          "allergens": "",
+          "desc": "0.33l",
+          "id": 3,
+          "name": "Fanta/Sprite/Mezzo Mix",
+          "price": "3.50"
+        },
+        {
+          "allergens": "",
+          "desc": "0,25",
+          "id": 4,
+          "name": "Eistee(Pfirsich,Zitrone)",
+          "price": "3.50"
+        },
+        {
+          "allergens": "",
+          "desc": "0,25",
+          "id": 5,
+          "name": "Red Bull",
+          "price": "3.00"
+        },
+        {
+          "allergens": "",
+          "desc": "0,5l",
+          "id": 6,
+          "name": "Apfelschorle",
+          "price": "3.40"
         }
       ],
-      "name": "getränk"
+      "name": "Wasser"
+    },
+    {
+      "icon": "",
+      "id": "",
+      "items": [
+        {
+          "allergens": "",
+          "desc": "",
+          "id": 1,
+          "name": "Espresso",
+          "price": "3.10"
+        },
+        {
+          "allergens": "",
+          "desc": "",
+          "id": 2,
+          "name": "Cappucinno",
+          "price": "3.50"
+        },
+        {
+          "allergens": "",
+          "desc": "",
+          "id": 3,
+          "name": "Latte Macchiato",
+          "price": "3.45"
+        },
+        {
+          "allergens": "",
+          "desc": "",
+          "id": 4,
+          "name": "Kaffe Creme",
+          "price": "3.40"
+        },
+        {
+          "allergens": "",
+          "desc": "",
+          "id": 5,
+          "name": "Café au lait",
+          "price": "3.80"
+        },
+        {
+          "allergens": "",
+          "desc": "",
+          "id": 6,
+          "name": "Americano",
+          "price": "3.15"
+        }
+      ],
+      "name": "Kaffee"
+    },
+    {
+      "icon": "",
+      "id": "",
+      "items": [
+        {
+          "allergens": "",
+          "desc": "(Milch: Kalt/Warm)",
+          "id": 1,
+          "name": "Nescafé",
+          "price": "3.20"
+        },
+        {
+          "allergens": "",
+          "desc": "",
+          "id": 2,
+          "name": "Balkanischer Kaffee",
+          "price": "2.50"
+        }
+      ],
+      "name": "Specials"
+    },
+    {
+      "icon": "",
+      "id": "",
+      "items": [
+        {
+          "allergens": "",
+          "desc": "",
+          "id": 1,
+          "name": "Strawberry Matcha",
+          "price": "5.50"
+        },
+        {
+          "allergens": "",
+          "desc": "",
+          "id": 2,
+          "name": "Mango Matcha",
+          "price": "5.50"
+        },
+        {
+          "allergens": "",
+          "desc": "",
+          "id": 3,
+          "name": "Himbeere Matcha",
+          "price": "5.50"
+        }
+      ],
+      "name": "Matcha"
+    },
+    {
+      "icon": "",
+      "id": "",
+      "items": [
+        {
+          "allergens": "",
+          "desc": "(Pfirsich,Apfel/Zimt,Himbeere)",
+          "id": 1,
+          "name": "Früchtetee",
+          "price": "2.20"
+        },
+        {
+          "allergens": "",
+          "desc": "",
+          "id": 2,
+          "name": "Kräuter/Grüner Tee",
+          "price": "2.20"
+        },
+        {
+          "allergens": "",
+          "desc": "",
+          "id": 3,
+          "name": "Schwarzer Tee",
+          "price": "2.20"
+        },
+        {
+          "allergens": "",
+          "desc": "",
+          "id": 4,
+          "name": "Kamillentee",
+          "price": "2.20"
+        }
+      ],
+      "name": "Tee"
     }
   ],
   "allergens": {
