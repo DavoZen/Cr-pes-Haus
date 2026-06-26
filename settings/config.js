@@ -23,7 +23,7 @@ window.SETTINGS_CFG = {
   },
   "contact": {
     "address": [
-      "Eisenbacher Tor",
+      " Eisenbacher Tor 9",
       "36341 Lauterbach (Hessen)",
       "Deutschland"
     ],
