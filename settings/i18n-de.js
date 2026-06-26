@@ -117,6 +117,5 @@ window.SITE_TEXT_DE = {
   "desc_cheese_crepe": "Gouda, Mozzarella, Cheddar, Edammer, saure Sahne",
   "desc_salami": "Rind-Salami, Käse, saure Sahne",
   "allergen_10": "выаыва",
-  "add_O": "jjj",
-  "allergen_11": "dsfsdf"
+  "add_O": "jjj"
 };
