@@ -74,13 +74,6 @@ window.MENU_DATA = {
           "id": 8,
           "name": "Blue Vanilla",
           "price": "7.30"
-        },
-        {
-          "allergens": "1 8 A B",
-          "desc": "+ Eis (Vanille / Schokolade / Erdbeere) +1,00 €",
-          "id": 9,
-          "name": "Zucker & Zimt",
-          "price": "4.20"
         }
       ],
       "name": "Waffel Genuss"
@@ -179,6 +172,13 @@ window.MENU_DATA = {
           "id": 22,
           "name": "+ Eis",
           "price": "1.00"
+        },
+        {
+          "allergens": "",
+          "desc": "",
+          "id": 23,
+          "name": "Crepes mit Zucker und Zimt",
+          "price": "4.00"
         }
       ],
       "name": "Süsse Crêpes"
@@ -392,6 +392,104 @@ window.MENU_DATA = {
         }
       ],
       "name": "Tee"
+    },
+    {
+      "icon": "",
+      "id": "",
+      "items": [
+        {
+          "allergens": "",
+          "desc": "(Ingwer,Apfel,Orange,Karotte)",
+          "id": 1,
+          "name": "Golden Boost 0,2l",
+          "price": "2.60"
+        },
+        {
+          "allergens": "",
+          "desc": "(Rote Bete,Apfel,Orange,Karotte)",
+          "id": 2,
+          "name": "Red Energy 0,2l",
+          "price": "2.90"
+        },
+        {
+          "allergens": "",
+          "desc": "(Ananas,Mango,Orange)",
+          "id": 3,
+          "name": "Tropical Flow",
+          "price": "3.50"
+        },
+        {
+          "allergens": "",
+          "desc": "(Zitrone,Orange,Grapefruit)",
+          "id": 4,
+          "name": "Citrus Splash 0,2l",
+          "price": "2.70"
+        },
+        {
+          "allergens": "",
+          "desc": "(Rote Bete,Apfel,Orange,Karotte,Sellerie)",
+          "id": 5,
+          "name": "Vita Glow 0,2l",
+          "price": "3.20"
+        },
+        {
+          "allergens": "",
+          "desc": "(Sellerie,Apfel)",
+          "id": 6,
+          "name": "Green Balane",
+          "price": "2.50"
+        },
+        {
+          "allergens": "",
+          "desc": "",
+          "id": 7,
+          "name": "Orange Pur",
+          "price": "2.50"
+        },
+        {
+          "allergens": "",
+          "desc": "",
+          "id": 8,
+          "name": "Apfel Pur",
+          "price": "2.20"
+        }
+      ],
+      "name": "Unsere Säfte"
+    },
+    {
+      "icon": "",
+      "id": "",
+      "items": [
+        {
+          "allergens": "",
+          "desc": "(Ciabatta,Grünes Pesto,Rucola,Buratta,Kirschtomaten,Balsamico)",
+          "id": 1,
+          "name": "Burrata Caprese Sandwich",
+          "price": "7.00"
+        },
+        {
+          "allergens": "",
+          "desc": "(Ciabatta,Putenbrust-Aufschnitt,Mozzarella,Rucola,Grünes Pesto,Tomaten,Balsamico)",
+          "id": 2,
+          "name": "Italienisches Pesto Ciabatta",
+          "price": "6.20"
+        },
+        {
+          "allergens": "",
+          "desc": "(Ciabatta,Gekochtes Ei,Avocado,Tomaten,Rucola)",
+          "id": 3,
+          "name": "Delux Frühstücks-Ciabatta",
+          "price": "6.00"
+        },
+        {
+          "allergens": "",
+          "desc": "(Ciabatta,Hänchenschinken,gekochte Ei,Gouda,Frischkäse)",
+          "id": 4,
+          "name": "Hänchen Sandwich",
+          "price": "5.50"
+        }
+      ],
+      "name": "Sandwiches"
     }
   ],
   "allergens": {
