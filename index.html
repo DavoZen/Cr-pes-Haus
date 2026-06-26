@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="page_title">Crêpes Haus</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" data-settings-font>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="aurora">
+  <canvas id="aurora-canvas"></canvas>
+  <div class="aurora-glow"></div>
+</div>
+
+<div class="bg-canvas">
+  <div class="bg-gradient"></div>
+  <div class="bg-grid"></div>
+  <div class="bg-orb bg-orb--1"></div>
+  <div class="bg-orb bg-orb--2"></div>
+  <div class="bg-orb bg-orb--3"></div>
+</div>
+<canvas id="particles"></canvas>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="#" class="logo">
+      Crêpes <span style="color: var(--gold);">Haus</span>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li class="nav-dropdown">
+        <a href="#menu" onclick="toggleMenuDropdown(event)">Speisekarte ▾</a>
+        <ul class="nav-dropdown-menu" id="menuDropdown">
+          <li><a href="#section-waffeln" onclick="navigateToCategory(event, 'waffeln')">Waffeln</a></li>
+          <li><a href="#section-sweet-crepes" onclick="navigateToCategory(event, 'sweet-crepes')">Süße Crêpes</a></li>
+          <li><a href="#section-savory-crepes" onclick="navigateToCategory(event, 'savory-crepes')">Herzhaft</a></li>
+          <li><a href="#section-getraenke" onclick="navigateToCategory(event, 'getraenke')">Getränke</a></li>
+          <li><a href="#section-kaffee" onclick="navigateToCategory(event, 'kaffee')">Kaffee</a></li>
+          <li><a href="#section-specials" onclick="navigateToCategory(event, 'specials')">Specials</a></li>
+          <li><a href="#section-matcha" onclick="navigateToCategory(event, 'matcha')">Matcha</a></li>
+          <li><a href="#section-tee" onclick="navigateToCategory(event, 'tee')">Tee</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#contact" data-i18n="nav_contact" onclick="closeNav()">Kontakt</a></li>
+      <li><a href="about.html" data-i18n="nav_about" onclick="closeNav()">Über uns</a></li>
+      <li>
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-btn active" data-lang-btn="de" data-i18n="lang_de" onclick="I18N.setLang('de')">DE</button>
+          <button class="lang-btn" data-lang-btn="en" data-i18n="lang_en" onclick="I18N.setLang('en')">EN</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-badge" data-i18n="hero_badge">Frisch gemacht mit Liebe</span>
+    <h1 data-i18n="hero_title">Crêpes <span class="gold">Haus</span></h1>
+    <p class="subtitle" data-i18n="hero_sub">
+      Frische Waffeln · Knusprige Crêpes · Hausgemachtes Eis —<br>direkt aus Lauterbach, Hessen
+    </p>
+    <div class="btn-group">
+      <a href="#waffeln" class="btn" data-i18n="hero_cta1">Karte ansehen ↓</a>
+      <a href="#contact" class="btn btn-outline" data-i18n="hero_cta2">Besuchen Sie uns</a>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ========== MENU ========== -->
+<main id="menu" class="section">
+  <div class="section-header">
+    <h2 data-i18n="menu_title">Unsere Speisekarte</h2>
+    <p data-i18n="menu_sub">Vollendeter Genuss — jeden Tag frisch zubereitet</p>
+  </div>
+</main>
+
+<div class="section-divider"><div class="line"></div></div>
+
+
+
+<!-- ========== KONTAKT ========== -->
+<section id="contact" class="info-section">
+  <h2 data-i18n="contact_title">Standort & Öffnungszeiten</h2>
+  <p data-i18n="contact_sub">Wir freuen uns auf Ihren Besuch — direkt am Eisenbacher Tor in Lauterbach</p>
+  <div class="info-grid" id="contactContent"></div>
+</section>
+
+
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="footer-content">
+    <a href="#" class="logo">Crêpes <span style="color: var(--gold);">Haus</span></a>
+    <ul class="footer-links">
+      <li><a href="#menu">Speisekarte</a></li>
+
+      <li><a href="#contact">Kontakt</a></li>
+      <li><a href="about.html">Über uns</a></li>
+    </ul>
+    <div class="footer-bottom">
+      <span data-i18n="footer_since">© 2025</span> <span style="color: var(--gold); font-weight: 600;" data-i18n="page_title">Crêpes Haus</span> · <span data-i18n="footer_slogan">Frische Waffeln & Crêpes aus Lauterbach</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== SCRIPTS ========== -->
+<script src="js/github-settings-loader.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/aurora-init.js"></script>
+<script src="js/bg-effects.js"></script>
+<script src="js/settings-loader.js"></script>
+<script>
+  window.closeNav = function () {
+    document.getElementById('hamburger').classList.remove('active');
+    document.getElementById('navLinks').classList.remove('active');
+    var dd = document.getElementById('menuDropdown');
+    if (dd) dd.classList.remove('open');
+  };
+
+  window.toggleMenuDropdown = function (e) {
+    e.preventDefault();
+    var dd = document.getElementById('menuDropdown');
+    dd.classList.toggle('open');
+  };
+
+  window.navigateToCategory = function (e, catId) {
+    e.preventDefault();
+    closeNav();
+    var section = document.getElementById('section-' + catId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    location.hash = 'section-' + catId;
+  };
+
+  document.addEventListener('click', function (e) {
+    var dd = document.getElementById('menuDropdown');
+    if (dd && !e.target.closest('.nav-dropdown')) {
+      dd.classList.remove('open');
+    }
+  });
+
+  document.getElementById('hamburger').addEventListener('click', function () {
+    this.classList.toggle('active');
+    document.getElementById('navLinks').classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>
