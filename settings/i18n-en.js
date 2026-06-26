@@ -14,7 +14,7 @@ window.SITE_TEXT_EN = {
   "nav_close": "Close",
   "hero_badge": "Made fresh with love",
   "hero_title": "Crêpes <span class=\"gold\">Haus</span>",
-  "hero_sub": "Fresh waffles · Crispy crêpes · Homemade ice cream —<br>straight from Lauterbach, Germany",
+  "hero_sub": "Fresh crêpes · Crispy waffles · Straight from Lauterbach",
   "hero_cta1": "View menu",
   "hero_cta2": "Visit us",
   "menu_title": "Our Menu",
