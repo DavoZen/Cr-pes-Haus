@@ -88,7 +88,7 @@ window.SITE_TEXT_DE = {
   "add_K": "ENTHÄLT SESAM",
   "add_L": "ENTHÄLT SULFITE",
   "add_M": "ENTHÄLT LUPINEN",
-  "add_N": "ENTHÄLT WEICHTER",
+  "add_N": "ggg",
   "lang_de": "DE",
   "lang_en": "EN",
   "desc_favorite_waffel": "Nutella, Vanillesauce, Erdbeeren, Bananen, Kirschen, Blaubeeren",
@@ -115,5 +115,6 @@ window.SITE_TEXT_DE = {
   "desc_eis": "Vanille · Schokolade · Erdbeere",
   "desc_ham_cheese": "Hähnchen/Puten-Schinken, Gouda, Tomate, saure Sahne",
   "desc_cheese_crepe": "Gouda, Mozzarella, Cheddar, Edammer, saure Sahne",
-  "desc_salami": "Rind-Salami, Käse, saure Sahne"
+  "desc_salami": "Rind-Salami, Käse, saure Sahne",
+  "allergen_10": "bbb"
 };
