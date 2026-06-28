@@ -403,18 +403,6 @@ window.MENU_DATA = {
     {
       "icon": "",
       "id": "",
-      "items": [],
-      "name": ""
-    },
-    {
-      "icon": "",
-      "id": "",
-      "items": [],
-      "name": ""
-    },
-    {
-      "icon": "",
-      "id": "",
       "items": [
         {
           "allergens": "",
