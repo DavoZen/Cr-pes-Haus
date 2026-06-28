@@ -474,6 +474,41 @@ window.MENU_DATA = {
         }
       ],
       "name": "Unsere Säfte"
+    },
+    {
+      "icon": "",
+      "id": "",
+      "items": [
+        {
+          "allergens": "",
+          "desc": "(Ciabatta,Grünes Pesto,Rucola,Buratta,Kirschtomaten,Balsamico)",
+          "id": 1,
+          "name": "Buratta Caprese Sandwich",
+          "price": "7.00"
+        },
+        {
+          "allergens": "",
+          "desc": "(Ciabatta,Putenbrust-Aufschnitt,Mozzarella,Rucola,Grünes Pesto,Tomaten,Balsamico)",
+          "id": 2,
+          "name": "Italienisches Pesto Ciabatta",
+          "price": "6.20"
+        },
+        {
+          "allergens": "",
+          "desc": "(Ciabatta,Gekochtes Ei,Avocado,Tomaten,Rucola)",
+          "id": 3,
+          "name": "Delux Frühstücks- Ciabatta",
+          "price": "6.00"
+        },
+        {
+          "allergens": "",
+          "desc": "(Ciabatta,Hänchenschinken,gekochte Ei,Gouda,Frischkäse)",
+          "id": 4,
+          "name": "Hänchen Sandwich",
+          "price": "5.50"
+        }
+      ],
+      "name": "Sandwiches"
     }
   ],
   "allergens": {
