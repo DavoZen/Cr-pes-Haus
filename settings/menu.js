@@ -20,56 +20,56 @@ window.MENU_DATA = {
       "id": "waffeln",
       "items": [
         {
-          "allergens": "A B C D E",
+          "allergens": "",
           "desc": "Nutella, Vanillesauce, Erdbeeren, Bananen, Kirschen, Blaubeeren",
           "id": 1,
           "name": "Favorite Waffel",
           "price": "8.50"
         },
         {
-          "allergens": "1 2 3 4 5 A B C D E",
+          "allergens": "",
           "desc": "Nutella, saftige Kirschen",
           "id": 2,
           "name": "Cherry Chocco",
           "price": "6.20"
         },
         {
-          "allergens": "1 2 3 4 5 A B C D E",
+          "allergens": "",
           "desc": "Nutella, Blaubeeren",
           "id": 3,
           "name": "Blueberry Love",
           "price": "6.70"
         },
         {
-          "allergens": "1 2 3 4 5 A B C D E",
+          "allergens": "",
           "desc": "Nutella, Erdbeeren",
           "id": 4,
           "name": "Strawberry Dream",
           "price": "6.50"
         },
         {
-          "allergens": "1 2 3 A B C",
+          "allergens": "",
           "desc": "Vanillesauce, Himbeeren, Bueno Creme",
           "id": 5,
           "name": "Berry Vanilla",
           "price": "7.80"
         },
         {
-          "allergens": "1 2 3 A B C",
+          "allergens": "",
           "desc": "Vanillesauce, fruchtige Kirschen",
           "id": 6,
           "name": "Cherry Vanilla",
           "price": "6.20"
         },
         {
-          "allergens": "1 2 3 4 5 A B C D E",
+          "allergens": "",
           "desc": "Nutella, Bananen",
           "id": 7,
           "name": "Banana Chocco",
           "price": "5.10"
         },
         {
-          "allergens": "1 2 3 A B C",
+          "allergens": "",
           "desc": "Vanillesauce, Blaubeeren",
           "id": 8,
           "name": "Blue Vanilla",
@@ -83,91 +83,91 @@ window.MENU_DATA = {
       "id": "sweet-crepes",
       "items": [
         {
-          "allergens": "1 2 3 4 5 A B C D E",
+          "allergens": "",
           "desc": "Bueno Creme, Keks-Crunch, Erdbeeren",
           "id": 10,
           "name": "Sweet Favorite",
           "price": "8.50"
         },
         {
-          "allergens": "1 2 3 4 5 A B C D E",
+          "allergens": "",
           "desc": "Kinder Schokolade, Blaubeeren",
           "id": 11,
           "name": "Chocco Dream",
           "price": "8.50"
         },
         {
-          "allergens": "1 2 3 A B C",
+          "allergens": "",
           "desc": "Aprikose / Erdbeere",
           "id": 12,
           "name": "Marmelade Crêpes",
           "price": "4.00"
         },
         {
-          "allergens": "1 2 3 4 5 A B C D",
+          "allergens": "",
           "desc": "Nutella, Keks-Crunch, Blaubeeren",
           "id": 13,
           "name": "Berry Bliss",
           "price": "6.50"
         },
         {
-          "allergens": "1 2 3 4 5 A B C D E",
+          "allergens": "",
           "desc": "Nutella, Keks-Crunch, Banane",
           "id": 14,
           "name": "Banana Heaven",
           "price": "5.50"
         },
         {
-          "allergens": "1 2 3 4 5 A B C D E",
+          "allergens": "",
           "desc": "Nutella, Keks-Crunch, Erdbeeren",
           "id": 15,
           "name": "Strawberry Love",
           "price": "6.20"
         },
         {
-          "allergens": "1 2 3 4 A B C D",
+          "allergens": "",
           "desc": "Bueno Creme, Keks-Crunch, saure Kirschen",
           "id": 16,
           "name": "White Delight",
           "price": "5.70"
         },
         {
-          "allergens": "1 2 3 4 A B C D",
+          "allergens": "",
           "desc": "Pistaziencreme, Himbeeren, Keks-Crunch",
           "id": 17,
           "name": "Pistachio Cream",
           "price": "8.20"
         },
         {
-          "allergens": "1 2 3 4 5 A B C D E",
+          "allergens": "",
           "desc": "Nutella, Kinder Bueno, Keks-Crunch",
           "id": 18,
           "name": "Kinder Magic",
           "price": "7.50"
         },
         {
-          "allergens": "1 2 3 A B C",
+          "allergens": "",
           "desc": "Bueno Creme, Himbeeren, Kokosraspeln",
           "id": 19,
           "name": "Coco White",
           "price": "6.00"
         },
         {
-          "allergens": "1 2 3 4 5 A B C D E",
+          "allergens": "",
           "desc": "Nutella, M&M's",
           "id": 20,
           "name": "Sweet Mix",
           "price": "7.00"
         },
         {
-          "allergens": "1 2 3 4 5 A B C D E",
+          "allergens": "",
           "desc": "Nutella, Keks-Crunch, Kirschen",
           "id": 21,
           "name": "Cherry Kiss",
           "price": "6.20"
         },
         {
-          "allergens": "1 3 A B",
+          "allergens": "",
           "desc": "Vanille · Schokolade · Erdbeere",
           "id": 22,
           "name": "+ Eis",
@@ -195,21 +195,21 @@ window.MENU_DATA = {
       "id": "savory-crepes",
       "items": [
         {
-          "allergens": "1 2 3 A B C",
+          "allergens": "",
           "desc": "Hähnchen/Puten-Schinken, Gouda, Tomate, saure Sahne",
           "id": 23,
           "name": "Ham – Cheese Crêpe",
           "price": "7.00"
         },
         {
-          "allergens": "A B C",
+          "allergens": "",
           "desc": "Gouda, Mozzarella, Cheddar, Edammer, saure Sahne",
           "id": 24,
           "name": "Cheese Crêpe",
           "price": "6.50"
         },
         {
-          "allergens": "1 2 3 A B C",
+          "allergens": "",
           "desc": "Rind-Salami, Käse, saure Sahne",
           "id": 25,
           "name": "Savoury Salami",
