@@ -37,7 +37,7 @@ window.SITE_TEXT_DE = {
   "contact_address_label": "Adresse",
   "contact_address_value": "Eisenbacher Tor<br>36341 Lauterbach (Hessen)<br><span style=\"color: var(--text-muted); font-size: 1rem;\">Deutschland</span>",
   "contact_hours_label": "Öffnungszeiten",
-  "contact_hours_weekdays": "Montag – Freitag",
+  "contact_hours_weekdays": "Dienstag– Freitag",
   "contact_hours_weekdays_time": "14:00 – 18:00",
   "contact_hours_weekends": "Samstag – Sonntag",
   "contact_hours_weekends_time": "10:00 – 18:00",
