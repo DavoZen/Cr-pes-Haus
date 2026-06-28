@@ -179,6 +179,13 @@ window.MENU_DATA = {
           "id": 23,
           "name": "Crepes mit Zucker und Zimt",
           "price": "4.00"
+        },
+        {
+          "allergens": "",
+          "desc": "(Nutella,Keks-Crunch)",
+          "id": 24,
+          "name": "Classic Crepes",
+          "price": "4.50"
         }
       ],
       "name": "Süsse Crêpes"
@@ -402,37 +409,8 @@ window.MENU_DATA = {
     {
       "icon": "",
       "id": "",
-      "items": [
-        {
-          "allergens": "",
-          "desc": "(Ciabatta,Grünes Pesto,Rucola,Buratta,Kirschtomaten,Balsamico)",
-          "id": 1,
-          "name": "Burrata Caprese Sandwich",
-          "price": "7.00"
-        },
-        {
-          "allergens": "",
-          "desc": "(Ciabatta,Putenbrust-Aufschnitt,Mozzarella,Rucola,Grünes Pesto,Tomaten,Balsamico)",
-          "id": 2,
-          "name": "Italienisches Pesto Ciabatta",
-          "price": "6.20"
-        },
-        {
-          "allergens": "",
-          "desc": "(Ciabatta,Gekochtes Ei,Avocado,Tomaten,Rucola)",
-          "id": 3,
-          "name": "Delux Frühstücks-Ciabatta",
-          "price": "6.00"
-        },
-        {
-          "allergens": "",
-          "desc": "(Ciabatta,Hänchenschinken,gekochte Ei,Gouda,Frischkäse)",
-          "id": 4,
-          "name": "Hänchen Sandwich",
-          "price": "5.50"
-        }
-      ],
-      "name": "Sandwiches"
+      "items": [],
+      "name": ""
     },
     {
       "icon": "",
