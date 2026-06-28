@@ -45,7 +45,7 @@ window.SITE_TEXT_DE = {
   "footer_since": "© 2025",
   "about_badge": "Unsere Geschichte",
   "about_hero_title": "Leidenschaft für <span class=\"gold\">Crêpes</span>",
-  "about_hero_sub": "Seit Jahren zaubern wir die besten frischen Crêpes und knusprigen Waffeln in Lauterbach — mit Liebe und besten Zutaten.",
+  "about_hero_sub": "Wir zaubern die besten & frischen Crêpes knusprigen Waffeln in Lauterbach — mit Liebe und besten Zutaten.",
   "about_who_title": "Wer wir sind",
   "about_who_sub": "Mehr als nur ein Imbiss — ein Ort des Geschmacks",
   "about_philo_title": "Unsere Philosophie",
